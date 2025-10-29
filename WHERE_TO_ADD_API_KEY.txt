@@ -1,0 +1,153 @@
+╔════════════════════════════════════════════════════════════════════════╗
+║                   WHERE TO ADD YOUR GEMINI API KEY                     ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+📁 Your Project Structure:
+───────────────────────────────────────────────────────────────────────
+
+TysunMikePro/
+│
+├── 📄 .env  ← ← ← ADD YOUR API KEY HERE! ← ← ←
+│   │
+│   └── Open this file and add:
+│       GEMINI_API_KEY=your_actual_key_here
+│
+├── 📄 server.js
+├── 📄 Package.json
+├── 📁 public/
+├── 📁 src/
+└── 📁 views/
+
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                        STEP-BY-STEP INSTRUCTIONS                       ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+STEP 1: Get Your FREE API Key
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Go to: https://makersuite.google.com/app/apikey
+2. Sign in with Google
+3. Click "Create API Key"
+4. Copy the key (looks like: AIzaSyD...)
+
+
+STEP 2: Open Your .env File
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Navigate to your project folder: TysunMikePro/
+2. Find the file named: .env
+3. Open it with any text editor (VS Code, Notepad, etc.)
+
+
+STEP 3: Add Your API Key
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Find this line in the .env file:
+
+    GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
+
+Replace YOUR_GEMINI_API_KEY_HERE with your actual key:
+
+    GEMINI_API_KEY=AIzaSyD1234567890abcdefghijklmnopqrstuvwxyz
+                   ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+                   Your actual API key goes here!
+
+
+STEP 4: Save and Restart
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Save the .env file
+2. Stop your server (Ctrl+C)
+3. Start it again: npm start
+
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                           EXAMPLE .env FILE                            ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+Environment variables (.env)
+
+PORT=8080
+DATABASE_URL=postgres://USER:PASSWORD@HOST:PORT/DBNAME
+JWT_SECRET=change-this-super-secret
+SENDGRID_API_KEY=YOUR_SENDGRID_KEY
+MAIL_FROM="Tysun Mike Productions <hello@yourdomain.com>"
+BASE_URL=https://your-domain.com
+
+# Google Gemini AI Chatbot
+GEMINI_API_KEY=AIzaSyD1234567890abcdefghijklmnopqrstuvwxyz  ← Your key here!
+ADMIN_EMAIL=productions@tysunmike.us
+
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                              TESTING                                   ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+After adding your API key:
+
+1. Start server:
+   $ npm start
+
+2. Open browser:
+   http://localhost:5000/
+
+3. Click chat button (bottom-right corner)
+
+4. Type a message:
+   "Hello, are you working?"
+
+5. You should get an AI response! ✅
+
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                           TROUBLESHOOTING                              ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+❌ Problem: "API key not found"
+✅ Solution: Make sure .env is in the project root folder
+
+❌ Problem: "Invalid API key"
+✅ Solution: Double-check you copied the entire key correctly
+
+❌ Problem: No response from chatbot
+✅ Solution: Restart your server after adding the key
+
+❌ Problem: Still not working?
+✅ Solution: Check browser console (F12) for error messages
+
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                           IMPORTANT NOTES                              ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+🔒 SECURITY:
+   • Never commit .env to Git (already in .gitignore)
+   • Don't share your API key publicly
+   • Keep it secret!
+
+💰 COST:
+   • FREE: 1,500 requests per day
+   • Perfect for your website
+   • No credit card needed
+
+📧 EMAILS:
+   • All chat transcripts go to: productions@tysunmike.us
+   • Make sure ADMIN_EMAIL is set correctly
+
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                            QUICK SUMMARY                               ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+1. Get key: https://makersuite.google.com/app/apikey
+2. Open file: TysunMikePro/.env
+3. Add line: GEMINI_API_KEY=your_key_here
+4. Save file
+5. Restart: npm start
+6. Test: Open website, click chat button
+
+DONE! 🎉
+
+
+Need more help? Check these files:
+• API_KEY_SETUP_GUIDE.md (detailed guide)
+• CHATBOT_INTEGRATION_COMPLETE.md (full documentation)
+
+Or test the chatbot - it can help you! 😊

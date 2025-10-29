@@ -1,0 +1,119 @@
+================================================================================
+                        GMAIL EMAIL SETUP - QUICK GUIDE
+================================================================================
+
+You're now using Gmail instead of SendGrid to send emails!
+This is FREE and easier to set up.
+
+
+QUICK SETUP (3 STEPS):
+----------------------
+
+STEP 1: Enable 2-Factor Authentication
+   1. Go to: https://myaccount.google.com/security
+   2. Click "2-Step Verification"
+   3. Follow the setup process
+   (Required before you can create App Passwords)
+
+
+STEP 2: Create Gmail App Password
+   1. Go to: https://myaccount.google.com/apppasswords
+   2. Select app: Mail
+   3. Select device: Other (Custom name)
+   4. Enter name: TysunMikePro Website
+   5. Click Generate
+   6. COPY the 16-character password (looks like: abcd efgh ijkl mnop)
+
+
+STEP 3: Add to .env File
+   Open: TysunMikePro/.env
+   
+   Update these lines:
+   
+   GMAIL_USER=productions@tysunmike.us
+   GMAIL_APP_PASSWORD=abcdefghijklmnop  ← Your app password (NO SPACES!)
+   MAIL_FROM="Tysun Mike Productions <productions@tysunmike.us>"
+
+
+IMPORTANT:
+----------
+• Remove ALL SPACES from the app password!
+• Don't use quotes around the password
+• Use your actual email address
+
+CORRECT:
+   GMAIL_APP_PASSWORD=abcdefghijklmnop
+
+WRONG:
+   GMAIL_APP_PASSWORD=abcd efgh ijkl mnop  ❌ (has spaces)
+   GMAIL_APP_PASSWORD="abcdefghijklmnop"  ❌ (has quotes)
+
+
+INSTALL NODEMAILER:
+-------------------
+Run this command:
+
+   npm install nodemailer
+
+
+TESTING:
+--------
+1. Start server: npm start
+
+2. You should see:
+   ✅ Gmail is ready to send emails
+
+3. Test the chatbot:
+   - Open your website
+   - Click chat button
+   - Have a conversation
+   - Click "End & Send Transcript"
+   - Check your email!
+
+
+WHAT'S CHANGED:
+---------------
+✅ Replaced SendGrid with Gmail
+✅ Updated .env file
+✅ Updated src/mail.js
+✅ Updated src/config.js
+✅ Updated Package.json
+
+
+GMAIL LIMITS:
+-------------
+• FREE: 500 emails per day
+• Perfect for your website
+• No credit card needed
+
+
+TROUBLESHOOTING:
+----------------
+
+Problem: "Invalid login"
+Solution: Make sure you removed ALL SPACES from app password
+
+Problem: "2FA not enabled"
+Solution: Enable 2-Factor Authentication first
+
+Problem: Email not sending
+Solution: Restart server after updating .env
+
+
+NEED MORE HELP?
+---------------
+Check: GMAIL_SETUP_GUIDE.md (detailed instructions)
+
+
+SUMMARY:
+--------
+1. Enable 2FA: https://myaccount.google.com/security
+2. Create App Password: https://myaccount.google.com/apppasswords
+3. Add to .env: GMAIL_APP_PASSWORD=your_password
+4. Install: npm install nodemailer
+5. Test: npm start
+
+DONE! 📧✅
+
+================================================================================
+
