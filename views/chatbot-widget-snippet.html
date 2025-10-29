@@ -1,0 +1,95 @@
+<!-- ============================================================================
+     TYSUN MIKE PRODUCTIONS - AI CHATBOT WIDGET
+     Add this snippet before </body> tag on all pages
+     ============================================================================ -->
+
+<!-- Chatbot Configuration -->
+<script>
+    // Configure chatbot API URL (update for production)
+    window.CHATBOT_API_URL = window.location.hostname === 'localhost' 
+        ? 'http://localhost:5000/api/chatbot'  // Local development
+        : 'https://your-production-domain.com/api/chatbot';  // Production
+</script>
+
+<!-- Chatbot Toggle Button -->
+<button id="chatbot-toggle" aria-label="Toggle chatbot">
+    <svg viewBox="0 0 24 24">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+    </svg>
+</button>
+
+<!-- Chatbot Container -->
+<div id="chatbot-container">
+    <!-- Header -->
+    <div class="chatbot-header">
+        <div class="chatbot-header-info">
+            <div class="chatbot-avatar">TM</div>
+            <div class="chatbot-title">
+                <h3>Tysun AI Assistant</h3>
+                <div class="chatbot-status">
+                    <span class="status-dot"></span>
+                    <span>Online</span>
+                </div>
+            </div>
+        </div>
+        <button class="chatbot-close" aria-label="Close chatbot">&times;</button>
+    </div>
+    
+    <!-- Messages Area -->
+    <div class="chatbot-messages" id="chatbot-messages">
+        <div class="welcome-message">
+            <h4>👋 Welcome to Tysun Mike Productions!</h4>
+            <p>I'm your AI assistant. I can help you with:</p>
+            <p style="margin-top: 10px;">
+                🎚️ Mixing & Mastering<br>
+                🎨 Logo & Album Art Design<br>
+                💻 Website Building<br>
+                💰 Pricing & Services
+            </p>
+            <p style="margin-top: 15px; font-size: 13px;">
+                Ask me anything to get started!
+            </p>
+        </div>
+        
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typing-indicator">
+            <div class="message-avatar" style="background: linear-gradient(135deg, #00FFC8 0%, #00B8A9 100%); color: #0a0a0a;">TM</div>
+            <div class="typing-dots">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Input Area -->
+    <div class="chatbot-input-area">
+        <!-- Quick Actions -->
+        <div class="quick-actions" id="quick-actions">
+            <button class="quick-action-btn" data-message="How much does mixing cost?">💰 Pricing</button>
+            <button class="quick-action-btn" data-message="What services do you offer?">🎵 Services</button>
+            <button class="quick-action-btn" data-message="How do I book a project?">📅 Booking</button>
+        </div>
+        
+        <!-- Input Container -->
+        <div class="chatbot-input-container">
+            <textarea 
+                id="chatbot-input" 
+                placeholder="Type your message..." 
+                rows="1"
+                maxlength="500"
+            ></textarea>
+            <button id="chatbot-send" aria-label="Send message">
+                <svg viewBox="0 0 24 24">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- End Chat Button -->
+        <div class="end-chat-container">
+            <button id="end-chat-btn">📧 End & Send Transcript</button>
+        </div>
+    </div>
+</div>
+
